@@ -173,7 +173,7 @@
     <button id="no">არა</button>
 
     <div id="result">
-      <img src="image.png" alt="love photo">
+      <img src="k1.png" alt="love photo">
       <div id="good">GOOD GIRLLL 😍</div>
     </div>
   </div>
@@ -185,10 +185,15 @@
     const yesSound = document.getElementById('yesSound');
     const noSound = document.getElementById('noSound');
 
-
+    yesBtn.addEventListener('click', () => {
+      yesSound.currentTime = 0;
+      yesSound.play();
+      result.style.display = 'block';
+    });
 
     noBtn.addEventListener('mouseover', () => {
       noSound.currentTime = 0;
+      noSound.play();
       const x = Math.random() * 300 - 150;
       const y = Math.random() * 300 - 150;
       noBtn.style.transform = `translate(${x}px, ${y}px)`;
